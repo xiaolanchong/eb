@@ -35,6 +35,7 @@ extern "C" {
 
 #include <sys/types.h>
 #include <time.h>
+#include "build-pre.h"
 
 /*
  * Header size of the ebzip compression file.

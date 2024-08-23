@@ -123,9 +123,11 @@ eb_bind_booklist(EB_BookList *booklist, const char *path)
 	free(booklist->entries[i].title);
     }
 
+#ifdef ENABLE_EBNET
     error_code = ebnet_bind_booklist(booklist, path);
     if (error_code != EB_SUCCESS)
 	goto failed;
+#endif
 
     LOG(("out: eb_bind_booklist(book=%d) = %s", (int)booklist->code,
 	eb_error_string(EB_SUCCESS)));

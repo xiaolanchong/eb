@@ -36,7 +36,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <limits.h>
+#ifdef HAVE_UNISTD_H
 #include <unistd.h>
+#endif
 #include <fcntl.h>
 
 #ifdef ENABLE_PTHREAD
@@ -48,6 +50,15 @@
 #include "zio.h"
 #ifdef ENABLE_EBNET
 #include "ebnet.h"
+#endif
+
+#ifdef _MSC_VER
+#include <io.h>
+
+#define open _open
+#define close _close
+#define lseek _lseeki64
+#define read _read
 #endif
 
 /*

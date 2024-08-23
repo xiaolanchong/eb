@@ -45,10 +45,14 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
+#if HAVE_UNISTD_H
 #include <unistd.h>
-#include <dirent.h>
+#endif
 #include <fcntl.h>
+#ifndef _MSC_VER
+#include <dirent.h>
 #include <sys/time.h>
+#endif
 
 #ifdef HAVE_DIRECT_H
 #include <direct.h>
@@ -150,6 +154,10 @@
 
 #ifndef IN6ADDR_LOOPBACK_DECLARED
 #define in6addr_loopback ebnet_in6addr_loopback
+#endif
+
+#ifdef _MSC_VER
+typedef ptrdiff_t ssize_t;
 #endif
 
 #endif /* EB_BUILD_PRE_H */

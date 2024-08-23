@@ -1,0 +1,72 @@
+
+set( _hdr
+	appendix.h
+	binary.h
+	booklist.h
+	build-post.h
+	build-pre.h
+	defs.h
+	dummyin6.h
+	eb.h
+	ebnet.h
+	error.h
+	font.h
+	getaddrinfo.h
+	linebuf.h
+	ported_dirent.h
+	sysdefs.h
+	text.h
+	urlparts.h
+	zio.h
+)
+
+set( _src
+	all.c
+	appendix.c
+	appsub.c
+	bcd.c
+	binary.c
+	bitmap.c
+	book.c
+	booklist.c
+	copyright.c
+	cross.c
+	#dummyin6.c
+	eb.c
+	#ebnet.c
+	endword.c
+	error.c
+	exactword.c
+	filename.c
+	font.c
+	#getaddrinfo.c
+	hook.c
+	jacode.c
+	keyword.c
+	#linebuf.c
+	lock.c
+	log.c
+	match.c
+	menu.c
+	multi.c
+	#multiplex.c
+	narwalt.c
+	narwfont.c
+	readtext.c
+	search.c
+	setword.c
+	stopcode.c
+	strcasecmp.c
+	subbook.c
+	text.c
+	#urlparts.c
+	widealt.c
+	widefont.c
+	word.c
+	zio.c
+)
+
+add_compile_definitions(EB_BUILD_LIBRARY)
+add_library(eb ${_hdr} ${_src})
+include_directories(..)
+include_directories(../zlib)

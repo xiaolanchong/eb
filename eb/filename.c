@@ -33,6 +33,9 @@
 #include "ebnet.h"
 #endif
 #include "build-post.h"
+#ifdef _MSC_VER
+#include "ported_dirent.h"
+#endif
 
 #if defined(DOS_FILE_PATH) && defined(HAVE_MBSTRING_H)
 /* a path may contain double-byte chars in SJIS. */
