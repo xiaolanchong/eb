@@ -6,16 +6,13 @@
 .libs
 
 Makefile
-config.h
 config.log
 config.status
 doc/Makefile
 eb.conf
 eb/Makefile
-eb/build-post.h
 eb/stamp-build-post-h
 eb/stamp-sysdefs-h
-eb/sysdefs.h
 ebappendix/Makefile
 ebappendix/ebappendix
 ebfont/Makefile
@@ -29,7 +26,6 @@ ebstopcode/ebstopcode
 ebzip/Makefile
 ebzip/ebzip
 libebutils/Makefile
-libebutils/ebutils.h
 libebutils/libebutils.a
 libebutils/stamp-ebutils-h
 libtool
